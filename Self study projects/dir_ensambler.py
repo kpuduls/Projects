@@ -15,10 +15,10 @@ def load_images_from_folder(folder):
             images.append(img)
     return images
 
-imagePath1 = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\FixedFar32\custom_0'
-imagePath2 = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\FixedClose128_32\custom_0'
-imagePath3 = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\FixedMid64_32\custom_0'
-dirName = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\FixedAll32\custom_0'
+imagePath1 = R'dir'
+imagePath2 = R'dir'
+imagePath3 = R'dir'
+dirName = R'dir'
 
 
 # Create target Directory if don't exist
