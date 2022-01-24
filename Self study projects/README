@@ -1,1 +1,6 @@
+# Image classifier training files
 
+Scripts for image sample creation
+* Image cropping
+* Image rotation
+* Specific object detection in images (to find the object to crop)
