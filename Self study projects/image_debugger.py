@@ -15,9 +15,9 @@ def load_images_from_folder(folder):
             images.append(img)
     return images
 
-imagePath = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\unprocessed images\fixedwingsamples\fixedwingmid'
-dirName = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\unprocessed images\sampleimages'
-bgd_dir = R'C:\SightLine Applications\SLA-Examples-ARM 3.02.04\Classifier\unprocessed images\backgroundsamples'
+imagePath = R'dir'
+dirName = R'dir'
+bgd_dir = R'dir'
 
 
 # Create target Directory if don't exist
