@@ -8,4 +8,4 @@
 * Two spacecraft formation formulation possible (requires redefining state space model)
 
 ## Stable version - MILPv2
-### MILPfunc for use with CW projects trajectory propagation and visualization tools
+### MILPfunc - for use with CW projects trajectory propagation and visualization tools
