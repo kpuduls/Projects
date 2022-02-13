@@ -17,7 +17,7 @@
 
 <h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />
 
-####_w visualisations_ 
+_w visualisations_ 
 
 </h3>
 
