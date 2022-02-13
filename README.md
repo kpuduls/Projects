@@ -111,16 +111,13 @@ MATLAB Central File Exchange. Retrieved February 2, 2022.
 
 
 
-### Built With
+### Used libraries
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [numpy](https://nextjs.org/)
+* [torch](https://reactjs.org/)
+* [os](https://vuejs.org/)
+* [gurobipy](https://angular.io/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -153,9 +150,19 @@ The project requries python with the above listed libraries to be installed on t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Using mpc-spacecraft files
+
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://www.gurobi.com/resource/tutorial-mixed-integer-linear-programming/)_
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Using CW files
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://www.mathworks.com/matlabcentral/fileexchange/39340-vectorized-clohessy-wiltshire-hill-linear-propagation)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -196,7 +203,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Cite the above mentioned matlab adaptations as well as this project with this repo URL
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -205,7 +212,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Name: Krisjanis Puduls
+
+Email link: [puduls.krisjanis@gmail.com](puduls.krisjanis@gmail.com)
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
