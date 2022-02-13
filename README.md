@@ -116,7 +116,7 @@ MATLAB Central File Exchange. Retrieved February 2, 2022.
 
 <p align="center">
     <a href="https://github.com/kpuduls/Projects">
-        <img src="media/Plotly.PNG" alt="drawing" width="800" height="600">
+        <img src="media/Plotly.PNG" alt="drawing" width="500" height="500">
     </a>
 </p>
 
@@ -130,6 +130,8 @@ MATLAB Central File Exchange. Retrieved February 2, 2022.
 * [torch](https://reactjs.org/)
 * [os](https://vuejs.org/)
 * [gurobipy](https://angular.io/)
+* [matplotlib](https://angular.io/)
+* [plotly](https://angular.io/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
