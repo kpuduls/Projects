@@ -171,6 +171,10 @@ The project requries python with the above listed libraries to be installed on t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Combined project
+
+Use the **_plot-optimal-trajectory.py_** in directory CW for a quick start guide. 
+
 ### Using mpc-spacecraft files
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
