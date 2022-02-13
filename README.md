@@ -83,7 +83,7 @@ The Project has two main parts:
 
 ### mpc-spacecraft
 
-The **mpc-spacecraft** is model predictive controlled implemented using an gurobipy MILP solver.
+The **mpc-spacecraft** is model predictive controller implemented using an gurobipy MILP solver.
 Note that this solver free licence has limitations.
 <br >
 The model uses the Hills relative equations to model the dynamics of the spacecraft for near circular orbits.
