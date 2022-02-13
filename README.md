@@ -102,9 +102,15 @@ of the MILP solver.
 Some additional options would include multiple spacecraft / formation dynamics formulations and
 error box constraints.
 
+Use **_MILPv2.py_** as a quick starting guide.
+
 ### CW
 
-The **CW** is Vectorized Clohessy-Wiltshire Hill Linear Propagation scripts.
+The **CW** is Vectorized Clohessy-Wiltshire Hill Linear Trajectory Propagation scripts.
+Use to propagate any orbital trajectory in ECI or Hill relative orbital frame and convert the vectorized states betweeen 
+ECI <--> Hills frames.
+
+For usage see **_LOP_Demo.py_** as a quick starting guide.
 
 <br>
 *Note* - 
@@ -218,7 +224,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Cite the above mentioned matlab adaptations as well as this project with this repo URL
+Cite the above mentioned matlab adaptations as well as this project with this repo URL.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -231,7 +237,7 @@ Name: Krisjanis Puduls
 
 Email link: [puduls.krisjanis@gmail.com](puduls.krisjanis@gmail.com)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/kpuduls/Projects](https://github.com/kpuduls/Projects)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -260,6 +266,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-url]: https://github.com/github_username/repo_name/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+
