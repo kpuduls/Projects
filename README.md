@@ -73,7 +73,7 @@
 
 <p align="center">
     <a href="https://github.com/kpuduls/Projects">
-        <img src="media/plt.PNG" alt="drawing" width="1000" height="600">
+        <img src="media/plt.PNG" alt="drawing" width="1000" height="500">
     </a>
 </p>
 
