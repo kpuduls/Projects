@@ -4,13 +4,17 @@ from ECI2Hill_Vectorized import ECI2Hill_Vectorized
 from ECI2RSW import ECI2RSW
 from Hill2ECI_Vectorized import Hill2ECI_Vectorized
 from keplerUniversal import keplerUniversal
+from MILPfunc import optimize
+import plotly.graph_objects as go
+
 
 # Library imports
 import numpy as np
 import torch
 import matplotlib.pyplot as plt
     
-
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 # Declared Constants:
 ##################################  
@@ -92,16 +96,27 @@ print("kepler funcs")
 rCL,vCL=Hill2ECI_Vectorized(rTgt,vTgt,rHill,vHill,nargout=2)
 
 print("func end")
-#Compare Results from using CW propagation to the non-linear propagation!
-plt.rcParams["figure.figsize"] = [7.00, 3.50]
-plt.rcParams["figure.autolayout"] = True
-fig = plt.figure()
-ax = fig.add_subplot(projection='3d')
+
 r = earthRad
-u, v = np.mgrid[0:2 * np.pi:30j, 0:np.pi:20j]
-x = np.cos(u) * np.sin(v)
-y = np.sin(u) * np.sin(v)
-z = np.cos(v)
-#ax.plot_surface(x, y, z, cmap=plt.cm.YlGnBu_r)
-ax.plot3D(rCL[0,:], rCL[1,:], rCL[2,:], 'gray')
-plt.show()
+
+# Set up 100 points. First, do angles
+theta = np.linspace(0, 2 * np.pi, 100)
+phi = np.linspace(0, np.pi, 100)
+
+# Set up coordinates for points on the sphere
+x0 = r * np.outer(np.cos(theta), np.sin(phi))
+y0 = r * np.outer(np.sin(theta), np.sin(phi))
+z0 = r * np.outer(np.ones(100), np.cos(phi))
+
+# Set up traces
+trace1 = go.Surface(x=x0, y=y0, z=z0)
+trace1.update(showscale=False)
+
+trace2 = go.Scatter3d(x = rCL[0,:], y = rCL[1, :], z = rCL[2, :])
+trace2.update()
+
+data = go.Data([trace1, trace2])
+
+fig = go.Figure(data = data)
+
+fig.write_html('first_figure.html', auto_open=True)

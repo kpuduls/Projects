@@ -109,7 +109,7 @@ def optimize(x0, xdes, T_s, N, h, ms):
     # number of binary integer constraints b
     b = 0
     # number of desired position state vars
-    l = 3
+    l = 6
     # Weighting of terminal cost to fuel cost p
     p = 10
 
@@ -129,14 +129,14 @@ def optimize(x0, xdes, T_s, N, h, ms):
     Tw = np.hstack([np.zeros((l, N * 2 * m)), np.eye(l)])
 
     # Initial conditions
-    x01 = np.array([[100], [0], [0], [0], [0], [0]])
+    x01 = np.array([[10], [0], [0], [0], [0], [0]])
     # x02 = np.array([[0],[0],[0],[0],[0],[0]])
 
     # x0 = np.vstack([x01, x02])
 
     # Desired final positions
     # target
-    xdes = np.array([[0], [0], [0]])
+    #xdes = np.array([[0], [0], [0]])
 
     # Target ydes = Cd * x(N)
     # X(N) = Tn * x(k)
@@ -144,9 +144,9 @@ def optimize(x0, xdes, T_s, N, h, ms):
 
     # Inequalities for minimizing distance to desired positions (receeding horizon)
     Mt = np.vstack(
-        [np.matmul(Cd, np.matmul(Tn, np.matmul(Bp, S))) - Tw, - np.matmul(Cd, np.matmul(Tn, np.matmul(Bp, S))) - Tw])
-    Pt = np.vstack([xdes - np.matmul(Cd, np.matmul(Tn, np.matmul(Ap, x0))),
-                    - xdes + np.matmul(Cd, np.matmul(Tn, np.matmul(Ap, x0)))])
+        [np.matmul(Tn, np.matmul(Bp, S)), -np.matmul(Tn, np.matmul(Bp, S))])
+    Pt = np.vstack([xdes - np.matmul(Tn, np.matmul(Ap, x0)),
+                    - xdes + np.matmul(Tn, np.matmul(Ap, x0))])
 
     # Saturation constraints: Msat * z(k) <= Psat
     # Max thruster impuslive force 500N
@@ -159,7 +159,7 @@ def optimize(x0, xdes, T_s, N, h, ms):
     Biq = np.vstack([Pcost, Pt, Psat]).flatten()
 
     # Define for cost function J min f * z(k)
-    f = np.hstack([np.zeros((1, N * m)), np.ones((1, N * m)), p * np.ones((1, l))]).flatten()
+    f = np.hstack([np.zeros((1, N * m)), np.ones((1, N * m)), np.zeros((1, l))]).flatten()
 
     # Create an optimization model
     model = gp.Model()
@@ -190,11 +190,10 @@ def optimize(x0, xdes, T_s, N, h, ms):
 
     u0 = np.mat([[0], [0], [0]])
 
-    xstar = np.vstack([x0.T, xstar])
     ustar = np.vstack([u0.T, ustar])
 
-    rHill = xstar.T[0:(n / 2 + 1), :]
-    vHill = xstar.T[(n / 2 + 1):, :]
+    rHill = np.vstack([xstar.T[0, :], xstar.T[2, :], xstar.T[4, :]])
+    vHill = np.vstack([xstar.T[1, :], xstar.T[3, :], xstar.T[5, :]])
 
     return rHill, vHill, xstar, ustar
 
