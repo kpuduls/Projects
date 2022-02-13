@@ -2,6 +2,7 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import *
 import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
 
 np.set_printoptions(suppress=True)
 
@@ -196,14 +197,101 @@ def optimize(x0, xdes, T_s, N, h, ms):
     vHill = np.vstack([xstar.T[1, :], xstar.T[3, :], xstar.T[5, :]])
 
     fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(2, 3)
-    fig.suptitle('Optimization results')
+    fig.suptitle('Trajectory optimization results in Hill frame')
 
-    ax1.plot(T_s * np.array(range(N)), xstar[:, 0], marker='o')
-    ax2.plot(T_s * np.array(range(N)), xstar[:, 2], marker='o')
-    ax3.plot(T_s * np.array(range(N)), xstar[:, 4], marker='o')
-    ax4.step(T_s * np.array(range(N + 1)), ustar[:, 0])
-    ax5.step(T_s * np.array(range(N + 1)), ustar[:, 1])
-    ax6.step(T_s * np.array(range(N + 1)), ustar[:, 2])
+    ax1.plot(T_s * np.array(range(N)), xstar[:, 0], marker='o', markersize = 2, color = 'purple')
+    ax2.plot(T_s * np.array(range(N)), xstar[:, 2], marker='o', markersize = 2, color = 'purple')
+    ax3.plot(T_s * np.array(range(N)), xstar[:, 4], marker='o', markersize = 2, color = 'purple')
+    ax4.step(T_s * np.array(range(N + 1)), ustar[:, 0], color = 'red')
+    ax5.step(T_s * np.array(range(N + 1)), ustar[:, 1], color = 'red')
+    ax6.step(T_s * np.array(range(N + 1)), ustar[:, 2], color = 'red')
+
+    ax1.ticklabel_format(style='sci', scilimits=(-2, 2))
+    ax2.ticklabel_format(style='sci', scilimits=(-2, 2))
+    ax3.ticklabel_format(style='sci', scilimits=(-2, 2))
+    ax4.ticklabel_format(style='sci', scilimits=(-2, 2))
+    ax5.ticklabel_format(style='sci', scilimits=(-2, 2))
+    ax6.ticklabel_format(style='sci', scilimits=(-2, 2))
+
+    ax1.set_ylabel('Coordinate X, km')
+    ax2.set_ylabel('Coordinate Y, km')
+    ax3.set_ylabel('Coordinate Z, km')
+    ax4.set_ylabel('Applied control Ux, kN')
+    ax5.set_ylabel('Applied control Uy, kN')
+    ax6.set_ylabel('Applied control Uz, kN')
+
+    ax1.set_xlabel('Time t, s')
+    ax2.set_xlabel('Time t, s')
+    ax3.set_xlabel('Time t, s')
+    ax4.set_xlabel('Time t, s')
+    ax5.set_xlabel('Time t, s')
+    ax6.set_xlabel('Time t, s')
+
+    fig.tight_layout()
+
+    # Set ggplot styles and update Matplotlib with them.
+    ggplot_styles = {
+        'axes.edgecolor': 'white',
+        'axes.facecolor': 'EBEBEB',
+        'axes.grid': True,
+        'axes.grid.which': 'both',
+        'axes.spines.left': False,
+        'axes.spines.right': False,
+        'axes.spines.top': False,
+        'axes.spines.bottom': False,
+        'grid.color': 'white',
+        'grid.linewidth': '1.2',
+        'xtick.color': '555555',
+        'xtick.major.bottom': True,
+        'xtick.minor.bottom': True,
+        'ytick.color': '555555',
+        'ytick.major.left': True,
+        'ytick.minor.left': True,
+    }
+
+    plt.rcParams.update(ggplot_styles)
+
+    # Set minor ticks/gridline cadence.
+    ax1.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax1.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax1.grid(which='minor', linewidth=0.6)
+
+    # Set minor ticks/gridline cadence.
+    ax2.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax2.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax2.grid(which='minor', linewidth=0.6)
+
+    # Set minor ticks/gridline cadence.
+    ax3.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax3.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax3.grid(which='minor', linewidth=0.6)
+
+    # Set minor ticks/gridline cadence.
+    ax4.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax4.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax4.grid(which='minor', linewidth=0.6)
+
+    # Set minor ticks/gridline cadence.
+    ax5.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax5.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax5.grid(which='minor', linewidth=0.6)
+
+    # Set minor ticks/gridline cadence.
+    ax6.xaxis.set_minor_locator(AutoMinorLocator(2))
+    ax6.yaxis.set_minor_locator(AutoMinorLocator(2))
+
+    # Turn minor gridlines on and make them thinner.
+    ax6.grid(which='minor', linewidth=0.6)
 
     plt.show()
 

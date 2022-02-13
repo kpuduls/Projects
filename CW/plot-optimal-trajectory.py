@@ -42,7 +42,7 @@ rT = torch.tensor([[xt], [yt], [zt]])
 vT = torch.tensor([[xdott], [ydott], [zdott]])
 
 # Add inclination to the orbit in deg
-inc = - torch.tensor(51.65)
+inc = - torch.tensor(0)
 
 RYM = torch.tensor([[torch.cos(inc * (np.pi / 180)), 0, torch.sin(inc * (np.pi / 180))],
                     [0, 1, 0],
@@ -71,6 +71,9 @@ rHill, vHill, xstar, ustar = optimize(x0 = x0, xdes = xdes, T_s = T_s, N = N, h 
 rHill = torch.from_numpy(rHill)
 vHill = torch.from_numpy(vHill)
 
+rRef = torch.zeros(3, N)
+vRef = torch.zeros(3, N)
+
 print("third func")
 # Use a nonlinear propagator to determine the Target tragectory as well as
 # the Chaser tragectory
@@ -81,6 +84,8 @@ print("kepler funcs")
 # Now ... Convert the propagated Hill results back to an ECI reference
 # frame:
 rCL, vCL = Hill2ECI_Vectorized(rTgt, vTgt, rHill, vHill, nargout=2)
+
+rCLref, vCLref = Hill2ECI_Vectorized(rTgt, vTgt, rRef, vRef, nargout=2)
 
 print("func end")
 
@@ -96,14 +101,16 @@ y0 = r * np.outer(np.sin(theta), np.sin(phi))
 z0 = r * np.outer(np.ones(100), np.cos(phi))
 
 # Set up traces
-trace1 = go.Surface(x=x0, y=y0, z=z0)
-trace1.update(showscale=False)
+Earth = go.Surface(x=x0, y=y0, z=z0, opacity=1, name = 'Earth', colorscale=['white', 'blue', 'darkblue', 'blue', 'white'])
+Earth.update(showscale=False)
 
-trace2 = go.Scatter3d(x=rCL[0, :], y=rCL[1, :], z=rCL[2, :], marker=dict(color='LightSkyBlue', size=3))
-trace2.update()
+Chaser = go.Scatter3d(x=rCL[0, :], y=rCL[1, :], z=rCL[2, :], marker=dict(color='purple', size=3), opacity=0.6, name = 'Chaser')
+Chaser.update()
 
-data = go.Data([trace1, trace2])
+Target = go.Scatter3d(x=rCLref[0, :], y=rCLref[1, :], z=rCLref[2, :], marker=dict(color='green', size=1.5), opacity=0.8, name = 'Target')
 
-fig = go.Figure(data=data)
+data = go.Data([Earth, Chaser, Target])
+
+fig = go.Figure(data=data, layout=dict(title = 'Optimal spacecraft trajectory in ECI frame'))
 
 fig.write_html('first_figure.html', auto_open=True)

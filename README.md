@@ -15,7 +15,11 @@
     <img src="media/3Dtrajectory.PNG" alt="Logo" width="200" height="200">
   </a>
 
-<h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />  *w visualisations</h3>
+<h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />
+
+####_w visualisations_ 
+
+</h3>
 
   <p align="center">
     The goal of the projects is to obtain a tool for spacecraft trajectory propagation that would aid in realistic optimal trajectory
