@@ -47,7 +47,7 @@ _w visualisations_
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#used-libraries">Used libraries</a></li>
       </ul>
     </li>
     <li>
