@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/kpuduls/Projects">
-    <img src="CW/3Dtrajectory.PNG" alt="Logo" width="80" height="80">
+    <img src="media/3Dtrajectory.PNG" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />  *w visualisations</h3>
