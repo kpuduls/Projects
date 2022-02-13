@@ -7,16 +7,12 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-</script>
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/kpuduls/Projects">
-    <img src="media/3Dtrajectory.PNG" alt="Logo" width="80" height="80">
+    <img src="media/3Dtrajectory.PNG" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />  *w visualisations</h3>
