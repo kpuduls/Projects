@@ -27,14 +27,14 @@ _w visualisations_
     And visualise the propagated Local Orbital frame trajectories in Earth Centered Inertial frame
     that would help gain an overall basic understanding of these orbital mechanics modelled using relative Hills equations.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/kpuduls/Projects"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/kpuduls/Projects">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/kpuduls/Projects/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/kpuduls/Projects/issues">Request Feature</a>
   </p>
 </div>
 
@@ -197,7 +197,7 @@ _For more examples, please refer to the [Documentation](https://www.mathworks.co
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/kpuduls/Projects/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
