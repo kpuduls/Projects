@@ -71,8 +71,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+<p align="center">
+    <a href="https://github.com/kpuduls/Projects">
+        <img src="media/plt.PNG" alt="drawing" width="600" height="200">
+    </a>
+</p>
 The Project has to main parts:
 * mpc-spacecraft
 * CW
