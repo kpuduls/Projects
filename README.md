@@ -114,7 +114,11 @@ scripts written by: Darin Koblick (2022).
 Vectorized Clohessy-Wiltshire Hill Linear Propagation (https://www.mathworks.com/matlabcentral/fileexchange/39340-vectorized-clohessy-wiltshire-hill-linear-propagation),
 MATLAB Central File Exchange. Retrieved February 2, 2022.
 
-![trajectory in ECI frame]('Projects/CW/3Dtrajectory.PNG')
+<p align="center">
+    <a href="https://github.com/kpuduls/Projects">
+        <img src="media/Plotly.PNG" alt="drawing" width="800" height="600">
+    </a>
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
