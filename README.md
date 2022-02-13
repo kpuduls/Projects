@@ -84,11 +84,9 @@ Note that this solver free licence has limitations.
 <br >
 The model uses the Hills relative equations to model the dynamics of the spacecraft for near circular orbits.
 
-This is an inline equation: $$V_{sphere} = \frac{4}{3}\pi r^3$$,<br>
-followed by a display style equation:
-
-$$V_{sphere} = \frac{4}{3}\pi r^3$$
-
+```math
+a^2+b^2=c^2
+```
 The demo model includes thruster saturation limit constraints, terminal state constraints
 and a cost function to minimize the cost of fuel.
 <br>
