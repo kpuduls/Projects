@@ -73,10 +73,11 @@
 
 <p align="center">
     <a href="https://github.com/kpuduls/Projects">
-        <img src="media/plt.PNG" alt="drawing" width="800" height="600">
+        <img src="media/plt.PNG" alt="drawing" width="900" height="600">
     </a>
 </p>
-The Project has to main parts:
+
+The Project has two main parts:
 * mpc-spacecraft
 * CW
 
