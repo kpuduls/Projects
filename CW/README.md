@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="first_figure.html" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center"> SPACECRAFT MPC CONTROLLER <br /> (for near circular orbits) <br />  *w visualisations</h3>
