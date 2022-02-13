@@ -84,9 +84,11 @@ Note that this solver free licence has limitations.
 <br >
 The model uses the Hills relative equations to model the dynamics of the spacecraft for near circular orbits.
 
-<a href="https://github.com/kpuduls/Projects">
-<img src="media/equation1.PNG" alt="drawing" width="600" height="200">
-</a>
+<div align="center">
+    <a href="https://github.com/kpuduls/Projects">
+        <img src="media/equation1.PNG" alt="drawing" width="600" height="200">
+    </a>
+</div>
 
 The demo model includes thruster saturation limit constraints, terminal state constraints
 and a cost function to minimize the cost of fuel.
