@@ -265,5 +265,5 @@ Project Link: [https://github.com/kpuduls/Projects](https://github.com/kpuduls/P
 [issues-shield]: https://img.shields.io/github/issues/kpuduls/Projects.svg?style=for-the-badge
 [issues-url]: https://github.com/kpuduls/Projects/issues
 [license-shield]: https://img.shields.io/github/license/kpuduls/Projects.svg?style=for-the-badge
-[license-url]: https://github.com/kpuduls/Projects/LICENSE.txt
+[license-url]: https://github.com/kpuduls/Projects/LICENSE.md
 
